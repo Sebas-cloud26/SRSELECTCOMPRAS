@@ -4,7 +4,7 @@
    ========================================================= */
 window.SR_CONFIG = {
   // Número de WhatsApp con código de país, solo dígitos (ej: Colombia 57, México 52, Venezuela 58)
-  whatsapp: "573000000000",
+  whatsapp: "573195683520",
 
   // Porcentaje de abono que se solicita para confirmar el pedido
   abonoPorcentaje: 50,
