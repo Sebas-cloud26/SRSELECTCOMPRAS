@@ -266,7 +266,12 @@
       .filter((l, i, arr) => !(l === "" && arr[i - 1] === ""))
       .join("\n");
 
-    window.open(enlaceWhatsApp(mensaje), "_blank", "noopener");
+    const url = enlaceWhatsApp(mensaje);
+    const enlace = $("#linkWhatsapp");
+    enlace.href = url;
+    enlace.hidden = false;
+    const win = window.open(url, "_blank");
+    if (win) win.opener = null;
   }
 
   /* ---------- Eventos ---------- */
