@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sr Select · Compras en Estados Unidos</title>
+  <meta name="description" content="Sr Select: compramos por ti en Estados Unidos. Marcas originales para mujer y hombre. Haz tu pedido por WhatsApp.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Barra superior -->
+  <header class="nav">
+    <div class="wrap nav__inner">
+      <a href="#inicio" class="logo">Sr<span>Select</span></a>
+      <nav class="nav__links">
+        <a href="#catalogo" data-genero-link="mujer">Mujer</a>
+        <a href="#catalogo" data-genero-link="hombre">Hombre</a>
+        <a href="#marcas">Marcas</a>
+        <a href="#como-funciona">Cómo funciona</a>
+      </nav>
+      <button class="cart-btn" id="abrirCarrito" aria-label="Abrir pedido">
+        <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 7h12l-1 13H7L6 7Z"/><path d="M9 7a3 3 0 0 1 6 0"/></svg>
+        <span class="cart-btn__count" id="contadorCarrito">0</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" id="inicio">
+    <div class="wrap hero__inner">
+      <p class="eyebrow">Personal shopper · USA</p>
+      <h1>Lo mejor de Estados Unidos,<br><em>seleccionado para ti.</em></h1>
+      <p class="hero__lead">Marcas 100% originales para mujer y hombre. Eliges, separas con un abono por WhatsApp y nosotros nos encargamos de la compra y el envío.</p>
+      <div class="hero__cta">
+        <a href="#catalogo" class="btn btn--primary">Ver catálogo</a>
+        <a href="#" class="btn btn--ghost" id="whatsappDirecto">Escríbenos por WhatsApp</a>
+      </div>
+      <ul class="hero__stats">
+        <li><strong>100%</strong> originales</li>
+        <li><strong>+10</strong> marcas</li>
+        <li><strong>Envío</strong> a tu ciudad</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Marcas -->
+  <section class="brands" id="marcas">
+    <div class="wrap">
+      <h2 class="section-title">Compra por marca</h2>
+      <div class="brands__row" id="listaMarcas"></div>
+    </div>
+  </section>
+
+  <!-- Catálogo -->
+  <section class="catalog" id="catalogo">
+    <div class="wrap">
+      <div class="catalog__head">
+        <h2 class="section-title">Catálogo</h2>
+        <div class="tabs" role="tablist" id="tabsGenero">
+          <button class="tab is-active" data-genero="todos">Todos</button>
+          <button class="tab" data-genero="mujer">Mujer</button>
+          <button class="tab" data-genero="hombre">Hombre</button>
+        </div>
+      </div>
+      <div class="filters">
+        <input type="search" id="buscar" placeholder="Buscar producto..." aria-label="Buscar producto">
+        <select id="filtroMarca" aria-label="Filtrar por marca"><option value="">Todas las marcas</option></select>
+        <select id="filtroCategoria" aria-label="Filtrar por categoría"><option value="">Todas las categorías</option></select>
+      </div>
+      <p class="catalog__count" id="conteo"></p>
+      <div class="grid" id="gridProductos"></div>
+      <div class="custom-order">
+        <div>
+          <h3>¿No encuentras lo que buscas?</h3>
+          <p>Envíanos el link o la foto de cualquier producto de una tienda en EE.UU. y te cotizamos.</p>
+        </div>
+        <a href="#" class="btn btn--primary" id="pedidoPersonalizado">Cotizar un producto</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo funciona -->
+  <section class="steps" id="como-funciona">
+    <div class="wrap">
+      <h2 class="section-title">Cómo funciona</h2>
+      <ol class="steps__list">
+        <li><span>1</span><h3>Elige</h3><p>Agrega tus productos favoritos al pedido, con talla y cantidad.</p></li>
+        <li><span>2</span><h3>Envía tu pedido</h3><p>Completa tus datos y te llevamos a WhatsApp con el resumen listo.</p></li>
+        <li><span>3</span><h3>Abona</h3><p>Separa tu compra con un abono del <strong class="abono-pct">50</strong>% y la hacemos en EE.UU.</p></li>
+        <li><span>4</span><h3>Recibe</h3><p>Pagas el saldo al llegar tu producto y lo recibes en tu ciudad.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="wrap faq__inner">
+      <h2 class="section-title">Preguntas frecuentes</h2>
+      <details><summary>¿Los productos son originales?</summary><p>Sí. Compramos directamente en tiendas oficiales y outlets autorizados en Estados Unidos.</p></details>
+      <details><summary>¿Cuánto tarda mi pedido?</summary><p>Normalmente entre 10 y 20 días hábiles desde que confirmamos tu abono, según la tienda y el envío.</p></details>
+      <details><summary>¿Cómo pago el abono?</summary><p>Al enviar tu pedido por WhatsApp te compartimos los medios de pago disponibles para el abono.</p></details>
+      <details><summary>¿Los precios incluyen envío?</summary><p>Los precios son de referencia en USD. Te confirmamos el valor final con envío por WhatsApp antes de cualquier pago.</p></details>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <a href="#inicio" class="logo">Sr<span>Select</span></a>
+      <p>Compras personalizadas en Estados Unidos.</p>
+      <div class="footer__links" id="redes"></div>
+      <small>© <span id="anio"></span> Sr Select. Las marcas mencionadas pertenecen a sus respectivos dueños.</small>
+    </div>
+  </footer>
+
+  <!-- Botón flotante WhatsApp -->
+  <a href="#" class="wa-float" id="waFlotante" aria-label="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 32 32" width="28" height="28" fill="currentColor"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.6c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.6 10.6 0 1 1 16 26.6Zm5.8-7.9c-.3-.2-1.9-.9-2.2-1-.3-.1-.5-.2-.7.2l-1 1.2c-.2.2-.4.2-.7.1a8.7 8.7 0 0 1-4.3-3.8c-.3-.6.3-.5.9-1.7.1-.2 0-.4 0-.5l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4-.3.3-1.2 1.1-1.2 2.8s1.2 3.2 1.4 3.4c.2.2 2.4 3.6 5.7 5 2.1.9 2.9 1 4 .8.6-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5l-.6-.3Z"/></svg>
+  </a>
+
+  <!-- Panel del pedido -->
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="carrito" aria-label="Tu pedido" aria-hidden="true">
+    <div class="drawer__head">
+      <h2>Tu pedido</h2>
+      <button class="icon-btn" id="cerrarCarrito" aria-label="Cerrar">✕</button>
+    </div>
+    <div class="drawer__body">
+      <div id="itemsCarrito"></div>
+      <p class="empty" id="carritoVacio">Aún no has agregado productos.</p>
+    </div>
+    <form class="drawer__foot" id="formPedido" novalidate>
+      <div class="totals">
+        <div><span>Subtotal</span><strong id="subtotal">$0</strong></div>
+        <div class="totals__abono"><span>Abono para separar (<span class="abono-pct">50</span>%)</span><strong id="abono">$0</strong></div>
+      </div>
+      <label>Nombre completo<input name="nombre" required autocomplete="name"></label>
+      <div class="row2">
+        <label>Ciudad<input name="ciudad" required autocomplete="address-level2"></label>
+        <label>Teléfono<input name="telefono" type="tel" autocomplete="tel"></label>
+      </div>
+      <label>Notas (opcional)<textarea name="notas" rows="2" placeholder="Colores, detalles, dirección..."></textarea></label>
+      <p class="form-error" id="errorForm" hidden></p>
+      <button type="submit" class="btn btn--wa">Enviar pedido por WhatsApp</button>
+      <small class="fineprint">Te confirmaremos disponibilidad, valor final y medios de pago para el abono por WhatsApp.</small>
+    </form>
+  </aside>
+
+  <!-- Modal de producto -->
+  <div class="modal" id="modal" hidden>
+    <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+      <button class="icon-btn modal__close" id="cerrarModal" aria-label="Cerrar">✕</button>
+      <div class="modal__media" id="modalMedia"></div>
+      <div class="modal__info">
+        <p class="eyebrow" id="modalMarca"></p>
+        <h3 id="modalTitulo"></h3>
+        <p class="price" id="modalPrecio"></p>
+        <div id="modalTallas"></div>
+        <label class="qty">Cantidad
+          <input type="number" id="modalCantidad" min="1" max="20" value="1">
+        </label>
+        <button class="btn btn--primary" id="modalAgregar">Agregar al pedido</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/productos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
